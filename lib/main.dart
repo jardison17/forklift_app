@@ -50,14 +50,34 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Container(
-              color: Colors.amber,
-              width: double.infinity,
-              height: 48.0,
-              padding: const EdgeInsets.all(12),
+              color: Colors.deepOrangeAccent,
+              width: double.infinity, // largura infinita
+
+              padding: const EdgeInsets.all(12), // Margem interna
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
 
-                children: [Text('Selecione a empilhadeira')],
+                children: [
+                  Text(
+                    'Selecione a empilhadeira',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Buscar Empilhadeiras',
+                      labelStyle: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                      ),
+                      filled: true,
+                      fillColor: Colors.white,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
