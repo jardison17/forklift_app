@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:forklift/config/supabase.dart';
 
-import 'components/List_forklift.dart';
-
-void main() {
+void main() async {
+  await SupabaseConfig.init();
   runApp(Forklift());
 }
 
