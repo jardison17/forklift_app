@@ -1,6 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+
+import 'components/List_forklift.dart';
 
 void main() {
   runApp(Forklift());
@@ -66,19 +66,21 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.white,
                     ),
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: 'Buscar Empilhadeiras',
-                      labelStyle: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                      ),
-                      filled: true,
-                      fillColor: Colors.white,
-                    ),
-                  ),
                 ],
               ),
+            ),
+            Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.all(12),
+                  width: double.infinity,
+                  height: 90,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 24, 24, 24),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
