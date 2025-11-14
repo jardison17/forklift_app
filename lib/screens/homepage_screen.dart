@@ -25,7 +25,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
                 Text(
                   'Selecione a empilhadeira',
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 15,
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
                   ),

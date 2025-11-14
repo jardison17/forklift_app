@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:forklift/screens/homepage_screen.dart';
 import 'package:forklift/config/supabase.dart';
+import 'transaction/transaction.dart';
 
 void main() async {
   await SupabaseConfig.init();
@@ -28,6 +29,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<Transaction> _transactions = [
+    Transaction(
+      id: 't1',
+      title: 'Novo Tênis de Corrida',
+      value: 399.99,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't2',
+      title: 'Novo Iphone',
+      value: 400.99,
+      date: DateTime.now(),
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
