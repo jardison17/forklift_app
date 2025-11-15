@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFFFC6E20),
         title: Row(
           children: [
             Icon(Icons.menu, color: Colors.white, size: 30),
@@ -44,47 +45,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        backgroundColor: Colors.deepOrangeAccent,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Container(
-              color: Colors.deepOrangeAccent,
-              width: double.infinity, // largura infinita
-
-              padding: const EdgeInsets.all(12), // Margem interna
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-
-                children: [
-                  Text(
-                    'Selecione a empilhadeira',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w900,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.all(12),
-                  width: double.infinity,
-                  height: 90,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 24, 24, 24),
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+      body: HomePage(),
     );
   }
 }
