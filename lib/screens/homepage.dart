@@ -11,8 +11,26 @@ class _HomePageState extends State<HomePageInicial> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Inicial'), centerTitle: true),
-      body: Container(width: 200, height: 100),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.black,
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(25),
+              child: Container(
+                width: double.infinity,
+                height: 90,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 73, 69, 70),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
