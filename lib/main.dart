@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:forklift/config/supabase.dart';
+import 'screens/homepage.dart';
 
-void main() async {
-  await SupabaseConfig.init();
+void main() {
   runApp(Forklift());
 }
 
@@ -46,7 +45,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: HomePage(),
+      body: HomePageInicial(),
     );
   }
 }
