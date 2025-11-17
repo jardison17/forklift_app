@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:forklift/screens/homepage_screen.dart';
-import 'package:forklift/config/supabase.dart';
+import 'screens/homepage.dart';
 
-void main() async {
-  await SupabaseConfig.init();
-  runApp(const Forklift());
+void main() {
+  runApp(Forklift());
 }
 
 class Forklift extends StatelessWidget {
@@ -14,8 +12,7 @@ class Forklift extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.orange),
-      home: const HomePage(),
-      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     );
   }
 }
@@ -32,24 +29,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF0F0F0F),
-        title: Row(
-          children: [
-            const SizedBox(width: 10),
-            const Text(
-              'ForkLift',
-              style: TextStyle(
-                fontSize: 25,
-                color: Color(0xFFFC6E20),
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-          ],
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 10, 10, 10),
+        title: Text(
+          'ForkLift',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
-
-      // AQUI está o corpo da HomePage
-      body: const HomepageScreen(),
+      body: ListaEmpilhadeirasPage(),
     );
   }
 }
